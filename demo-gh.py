@@ -2,7 +2,7 @@ import pandas as pd
 import yfinance as yf
 from datetime import timedelta
 from prefect import flow, task
-from prefect.logging import get_run_logger
+from prefect import get_run_logger
 
 
 @task(retries=3, cache_expiration=timedelta(30))
@@ -13,7 +13,7 @@ def fetch_data(ticker):
 def save_data(stock_df):
     stock_df = pd.read_csv("data.csv")
     log = get_run_logger()
-    log(stock_df)
+    log.debug(stock_df)
     print(stock_df)
     stock_df.to_csv("output.csv")
 
