@@ -1,21 +1,15 @@
 ###
-### A complete description of a Prefect Deployment for flow 'pipeline5'
+### A complete description of a Prefect Deployment for flow 'pipeline9'
 ###
 name: gh-demo
 description: null
-version: c21ed113451197bb0d14e4b12f590717
+version: c6fc2f955b8457babc948180b58f384b
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 tags: []
 parameters: {}
 schedule: null
 infra_overrides: {}
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: pipeline5
-manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -26,10 +20,13 @@ infrastructure:
   - -m
   - prefect.engine
   stream_output: true
-  _block_document_id: 981eb984-0049-4514-b2c4-d40e321bf9b4
-  _block_document_name: anonymous-3e55ccf8-67c5-40d7-8b8b-eea88054a50d
-  _is_anonymous: true
   _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: pipeline9
+manifest_path: null
 storage:
   bucket_path: prefectawsbucket/dev/
   aws_access_key_id: null
@@ -38,8 +35,8 @@ storage:
   _block_document_name: dev
   _is_anonymous: false
   _block_type_slug: s3
-path: /Users/jeffhale/Desktop/prefect/prefect-test-gh
-entrypoint: demo-gh.py:pipeline5
+path: ''
+entrypoint: demo-gh.py:pipeline9
 parameter_openapi_schema:
   title: Parameters
   type: object
