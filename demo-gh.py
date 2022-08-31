@@ -19,10 +19,6 @@ def save_data(stock_df):
 
 
 @flow
-def pipeline4(ticker="AMZN"):
+def pipeline5(ticker="AMZN"):
     df = fetch_data(ticker)
     save_data(df)
-
-
-if __name__ == "__main__":
-    pipeline4()
