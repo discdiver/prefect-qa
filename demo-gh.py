@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 import yfinance as yf
 from datetime import timedelta
 from prefect import flow, task
@@ -10,6 +10,7 @@ def fetch_data(ticker):
 
 
 def save_data(stock_df):
+    stock_df = pd.read_csv("data.csv")
     stock_df.to_csv("output.csv")
 
 
